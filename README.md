@@ -1,7 +1,8 @@
-**SockJs Client for Android.**
+**SockJs Client for Android**
 
 *Usage:*
-     `public class MainActivity extends AppCompatActivity implements SockJsClientListener {
+
+      public class MainActivity extends AppCompatActivity implements SockJsClientListener{
           SockJsClient sockJsClient;
           @Override
           protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +42,13 @@
           @Override
           protected void onStart() {
               //To do Here connect sockjs again...
+              //sockJsClient.connectSockJs("url", "accessKey");
           }
-      }`
+      }
           
   *Download:*
-       `repositories {
+  
+       repositories {
             maven {
                 url 'https://dl.bintray.com/vishu/maven'
             }
@@ -53,4 +56,4 @@
         
         dependencies {
             compile 'com.vishu.sockjsclientandroid:sockjsandroidclient:1.0.1'
-        }`
+        }
