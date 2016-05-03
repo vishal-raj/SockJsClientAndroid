@@ -48,12 +48,6 @@
           
   *Download:*
   
-       repositories {
-            maven {
-                url 'https://dl.bintray.com/vishu/maven'
-            }
-        }
-        
         dependencies {
             compile 'com.vishu.sockjsclientandroid:sockjsandroidclient:1.0.1'
         }
