@@ -9,7 +9,9 @@
               super.onCreate(savedInstanceState);
               setContentView(R.layout.activity_main);
               sockJsClient = new SockJsClient(this);
-              sockJsClient.connectSockJs("url", "accessKey");
+              sockJsClient.connectSockJs("url"); //without accessKey
+              //or
+              sockJsClient.connectSockJs("url", "accessKey"); //with accessKey
           }
           @Override
           public void onOpen(String json) {
@@ -17,8 +19,8 @@
           }
       
           @Override
-          public void onSuccess(String json) {
-              //To do if response having json, parse json here...
+          public void onMessage(String json) {
+              //To do currently only json string is supported...
               Log.d("success", json);
           }
       
@@ -47,7 +49,15 @@
       }
           
   *Download:*
-  
+      //Gradle
         dependencies {
-            compile 'com.vishu.sockjsclientandroid:sockjsandroidclient:1.0.1'
+            compile 'com.vishu.sockjsclientandroid:sockjsandroidclient:1.0.2'
         }
+        
+      //Maven
+      <dependency>
+            <groupId>com.vishu.sockjsclientandroid</groupId>
+            <artifactId>sockjsandroidclient</artifactId>
+            <version>1.0.2</version>
+            <type>pom</type>
+      </dependency>
