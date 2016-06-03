@@ -49,12 +49,14 @@
       }
           
   *Download:*
-      //Gradle
+      **Gradle**
+      
         dependencies {
             compile 'com.vishu.sockjsclientandroid:sockjsandroidclient:1.0.2'
         }
         
-      //Maven
+      **Maven**
+      
       <dependency>
             <groupId>com.vishu.sockjsclientandroid</groupId>
             <artifactId>sockjsandroidclient</artifactId>
